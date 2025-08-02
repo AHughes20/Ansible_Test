@@ -1,0 +1,10 @@
+---
+- name: Create a new local user
+  hosts: localhost
+  become: yes
+
+  tasks:
+    - name: Ensure user "devuser" exists
+      user:
+        name: devuser
+        state: present
